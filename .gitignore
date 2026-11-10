@@ -1,0 +1,11 @@
+# Legacy ve arsiv dosyalari
+nefismanti-site/
+
+# Test ve gecici dosyalar
+test_verification.py
+*.tif
+*.TIFF
+*.log
+Thumbs.db
+__pycache__/
+.pytest_cache/
