@@ -2,7 +2,7 @@
 nefismanti-site/
 
 # Test ve gecici dosyalar
-test_verification.py
+test_live.py
 *.tif
 *.TIFF
 *.log

@@ -96,20 +96,20 @@ python test_verification.py
 
 ---
 
-## 🌐 GitHub & Canlı Yayın (GitHub Pages)
+## 🌐 Canlı Yayın ve Sunucu Dağıtımı (Hetzner VPS + Cloudflare)
 
-1. GitHub'da `nefis-manti` adında boş bir repo oluşturun.
-2. Terminalden projeyi yükleyin:
-   ```powershell
-   git add .
-   git commit -m "feat: Nefis Manti e-ticaret platformu"
-   git remote add origin https://github.com/<kullanici_adiniz>/nefis-manti.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. GitHub **Settings ➡️ Pages** sekmesinden kaynağı `main` dalı olarak seçin.
-4. Alan adı DNS panelinizde `nefismanti` için `kullanici_adiniz.github.io` hedefli bir **CNAME** kaydı ekleyin.
-5. GitHub Pages altında **Enforce HTTPS** seçeneğini etkinleştirin.
+Proje, kurumsal Hetzner Linux VPS (`2.29.154.116`) üzerinde Docker Nginx ve Let's Encrypt SSL altyapısıyla çalışmaktadır.
+
+* **Canlı URL:** [https://nefismanti.guneyerdemir.com](https://nefismanti.guneyerdemir.com)
+* **SSL Sertifikası:** Let's Encrypt TLS 1.3 / HTTP/2 (Otomatik yenilenen)
+* **DNS & CDN:** Cloudflare Proxy
+* **Sunucu Dizini:** `/var/www/nefismanti`
+* **Web Sunucu:** Nginx (Gzip aktif, WebP/CSS/JS için 30 günlük tarayıcı önbelleklemesi)
+
+### Sunucuda Güncelleme Yapmak İçin:
+```bash
+ssh root@2.29.154.116 "cd /var/www/nefismanti && git pull origin main"
+```
 
 ---
 
